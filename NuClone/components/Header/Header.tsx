@@ -55,55 +55,55 @@ export function Header() {
 
           <OptionView>
             <OptionIcon>
-            <Ionicons name='grid-outline' size={25} color='#000'/>
+            <Ionicons name='barcode-outline' size={25} color='#000'/>
             </OptionIcon>
             <OptionText>
-              Pix
+              Pagar
             </OptionText>
           </OptionView>
 
           <OptionView>
             <OptionIcon>
-            <Ionicons name='grid-outline' size={25} color='#000'/>
+            <Ionicons name='arrow-up-circle-outline' size={25} color='#000'/>
             </OptionIcon>
             <OptionText>
-              Pix
+              Transferir
             </OptionText>
           </OptionView>
 
           <OptionView>
             <OptionIcon>
-            <Ionicons name='grid-outline' size={25} color='#000'/>
+            <Ionicons name='arrow-down-circle-outline' size={25} color='#000'/>
             </OptionIcon>
             <OptionText>
-              Pix
+              Depositar
             </OptionText>
           </OptionView>
 
           <OptionView>
             <OptionIcon>
-            <Ionicons name='grid-outline' size={25} color='#000'/>
+            <Ionicons name='phone-portrait-outline' size={25} color='#000'/>
             </OptionIcon>
             <OptionText>
-              Pix
+              Recarga
             </OptionText>
           </OptionView>
 
           <OptionView>
             <OptionIcon>
-            <Ionicons name='grid-outline' size={25} color='#000'/>
+            <Ionicons name='heart-outline' size={25} color='#000'/>
             </OptionIcon>
             <OptionText>
-              Pix
+              Doação
             </OptionText>
           </OptionView>
 
           <OptionView>
             <OptionIcon>
-            <Ionicons name='grid-outline' size={25} color='#000'/>
+            <Ionicons name='cellular-outline' size={25} color='#000'/>
             </OptionIcon>
             <OptionText>
-              Pix
+              Investir
             </OptionText>
           </OptionView>
         </ScrollView>
