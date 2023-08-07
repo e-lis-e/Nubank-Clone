@@ -34,4 +34,35 @@ export const TextWelcome = styled.Text`
   font-weight: bold;
 
 `
+export const TotalAccount = styled.View`
+  padding: 24px;
+`
+export const AccView = styled.View`
+  flex-direction: row;
+  justify-content:space-between;
+
+`
+export const Subtitle = styled.Text`
+  font-size: 16px;
+  font-weight: 600;
+
+  margin-bottom: 8px;
+`
+export const AccTotal = styled.Text`
+font-size: 20px;
+font-weight: 700;
+
+margin-top: 8px;
+`
+
+export const AccTotalNotVisible = styled.View`
+  margin-top: 8px;
+  height: 30px;
+  width: 70px;
+
+  background-color: #c1bec2;
+
+  border-radius: 2px;
+
+`
 ;

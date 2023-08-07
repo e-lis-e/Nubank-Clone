@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { Container, UpperView, UserIconView, OptionsIcon, TextWelcome } from './Header.styles';
+import { Container, UpperView, UserIconView, OptionsIcon, TextWelcome, TotalAccount, AccView, Subtitle, AccTotal, AccTotalNotVisible } from './Header.styles';
 import {Ionicons} from '@expo/vector-icons';
 
 export function Header() {
-  const [balance, setBalance] = useState(false);
+  const [account, setAccount] = useState(false);
 
   return (
+    <>
     <Container>
       <UpperView>
         <UserIconView>
@@ -14,8 +15,8 @@ export function Header() {
 
         </UserIconView>
         <OptionsIcon>
-        <TouchableOpacity onPress={() => setBalance(!balance)}>
-        {balance ?(
+        <TouchableOpacity onPress={() => setAccount(!account)}>
+        {account ?(
           <Ionicons name='eye-outline' size={25} color='#fff' style={{marginRight: 16}}></Ionicons>
         ) : (
           <Ionicons name='eye-off-outline' size={25} color='#fff' style={{marginRight: 16}}></Ionicons>
@@ -29,5 +30,17 @@ export function Header() {
         Olá, Elise
       </TextWelcome>
     </Container>
+    <TotalAccount>
+        <AccView>
+          <Subtitle>
+            Conta
+          </Subtitle>
+          <Ionicons name='chevron-forward-outline' size={20} color='#908d91'/>
+        </AccView>
+
+        {account ? (<AccTotal> R$1,02</AccTotal>) : (<AccTotalNotVisible/>)}
+        
+      </TotalAccount>
+    </>
   );
 }
