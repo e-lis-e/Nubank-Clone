@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { TouchableOpacity } from 'react-native';
-import { Container, UpperView, UserIconView, OptionsIcon, TextWelcome, TotalAccount, AccView, Subtitle, AccTotal, AccTotalNotVisible } from './Header.styles';
+import { TouchableOpacity, View } from 'react-native';
+import { Container, UpperView, UserIconView, OptionsIcon, TextWelcome, TotalAccount, AccView, Subtitle, AccTotal, AccTotalNotVisible, OptionView,OptionIcon, OptionText } from './Header.styles';
 import {Ionicons} from '@expo/vector-icons';
+import { ScrollView } from 'react-native';
 
 export function Header() {
   const [account, setAccount] = useState(false);
@@ -39,8 +40,74 @@ export function Header() {
         </AccView>
 
         {account ? (<AccTotal> R$1,02</AccTotal>) : (<AccTotalNotVisible/>)}
-        
       </TotalAccount>
+
+      <View>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{marginLeft: 24, paddingRight: 50}}>
+          <OptionView>
+            <OptionIcon>
+            <Ionicons name='grid-outline' size={25} color='#000'/>
+            </OptionIcon>
+            <OptionText>
+              Pix
+            </OptionText>
+          </OptionView>
+
+          <OptionView>
+            <OptionIcon>
+            <Ionicons name='grid-outline' size={25} color='#000'/>
+            </OptionIcon>
+            <OptionText>
+              Pix
+            </OptionText>
+          </OptionView>
+
+          <OptionView>
+            <OptionIcon>
+            <Ionicons name='grid-outline' size={25} color='#000'/>
+            </OptionIcon>
+            <OptionText>
+              Pix
+            </OptionText>
+          </OptionView>
+
+          <OptionView>
+            <OptionIcon>
+            <Ionicons name='grid-outline' size={25} color='#000'/>
+            </OptionIcon>
+            <OptionText>
+              Pix
+            </OptionText>
+          </OptionView>
+
+          <OptionView>
+            <OptionIcon>
+            <Ionicons name='grid-outline' size={25} color='#000'/>
+            </OptionIcon>
+            <OptionText>
+              Pix
+            </OptionText>
+          </OptionView>
+
+          <OptionView>
+            <OptionIcon>
+            <Ionicons name='grid-outline' size={25} color='#000'/>
+            </OptionIcon>
+            <OptionText>
+              Pix
+            </OptionText>
+          </OptionView>
+
+          <OptionView>
+            <OptionIcon>
+            <Ionicons name='grid-outline' size={25} color='#000'/>
+            </OptionIcon>
+            <OptionText>
+              Pix
+            </OptionText>
+          </OptionView>
+        </ScrollView>
+      </View>
     </>
   );
 }
