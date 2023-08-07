@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { Container, UpperView, UserIconView, OptionsIcon } from './Header.styles';
+import { Container, UpperView, UserIconView, OptionsIcon, TextWelcome } from './Header.styles';
 import {Ionicons} from '@expo/vector-icons';
 
 export function Header() {
+  const [balance, setBalance] = useState(false);
+
   return (
     <Container>
       <UpperView>
@@ -12,13 +14,20 @@ export function Header() {
 
         </UserIconView>
         <OptionsIcon>
-        <TouchableOpacity>
-        <Ionicons name='eye-outline' size={25} color='#fff'></Ionicons>
+        <TouchableOpacity onPress={() => setBalance(!balance)}>
+        {balance ?(
+          <Ionicons name='eye-outline' size={25} color='#fff' style={{marginRight: 16}}></Ionicons>
+        ) : (
+          <Ionicons name='eye-off-outline' size={25} color='#fff' style={{marginRight: 16}}></Ionicons>
+        )}
         </TouchableOpacity>
-        <Ionicons name='help-circle-outline' size={25} color='#fff'></Ionicons>
+        <Ionicons name='help-circle-outline' size={25} color='#fff'style={{marginRight: 16}}></Ionicons>
         <Ionicons name='mail-outline' size={25} color='#fff'></Ionicons>
         </OptionsIcon>
       </UpperView>
+      <TextWelcome>
+        Olá, Elise
+      </TextWelcome>
     </Container>
   );
 }
